@@ -1,8 +1,10 @@
-DROP DATABASE IF EXISTS tracker_db;
-CREATE DATABASE tracker_db;
+-- Either deletes or creates a database
+DROP DATABASE IF EXISTS manage_db;
+CREATE DATABASE manage_db;
 
-USE tracker_db;
+USE manage_db;
 
+-- Creates a table with the department role, allowing organization into the database based on their roles when selected
 CREATE TABLE department (
   id INT NOT NULL,
     depart_name VARCHAR(30),
@@ -13,6 +15,7 @@ CREATE TABLE department (
     ON DELETE SET NULL
 );
 
+-- Creates a role table that allows employees to be placed into their own salary range and what title they have
 CREATE TABLE role (
     id INT,
     title VARCHAR(30) NOT NULL,
@@ -24,7 +27,7 @@ CREATE TABLE role (
     ON DELETE SET NULL
 );
 
-
+-- Creates an employee table that allows for the first and last name of the employee as well as their manager if applicable
 CREATE TABLE employee (
     id INT,
     first_name VARCHAR(30),
