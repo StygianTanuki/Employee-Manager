@@ -1,5 +1,5 @@
 const express = require('express');
-// Utilizes mysql2
+// Utilizes MySQL2
 const mysql = require('mysql2');
 const inquirer = require('inquirer');
 
@@ -19,9 +19,9 @@ const db = mysql.createConnection(
     // MySQL Password
     password: 'rootroot',
     // Connects to the database
-    database: 'tracker_db'
+    database: 'manage_db'
   },
-  console.log(`Connected to the tracker_db database.`)
+  console.log(`Connected to the manage_db database.`)
 );
 
 // Listens for the port required
