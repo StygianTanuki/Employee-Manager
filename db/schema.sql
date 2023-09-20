@@ -1,8 +1,8 @@
 -- Either deletes or creates a database
-DROP DATABASE IF EXISTS manage_db;
-CREATE DATABASE manage_db;
+DROP DATABASE IF EXISTS tracker_db;
+CREATE DATABASE tracker_db;
 
-USE manage_db;
+USE tracker_db;
 
 -- Creates a table with the department role, allowing organization into the database based on their roles when selected
 CREATE TABLE department (
