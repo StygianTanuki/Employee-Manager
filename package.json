@@ -1,29 +1,19 @@
 {
-  "name": "employee-manager",
+  "name": "employee_manager",
   "version": "1.0.0",
-  "description": "will be able to use the employee tracker to add new employees, change roles, and add departments. ",
   "main": "server.js",
-  "directories": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "migrate": "mysql db/tracker.db < db/schema.sql",
-    "seed": "mysql db/tracker.db < db/seeds.sql",
-    "db": "mysql db/tracker.db",
-    "watch": "nodemon server.js",
     "start": "node server.js"
   },
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
   "dependencies": {
-    "chalk": "^4.0.0",
-    "console.table": "^0.10.0",
-    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "figlet": "^1.4.0",
-    "inquirer": "^7.3.3",
-    "mysql": "^2.18.1",
-    "mysql2": "^2.1.0",
-    "nodemon": "^2.0.4",
-    "sequelize": "^6.32.1",
-    "validator": "^13.0.0"
+    "jshint": "^2.12.0",
+    "mysql2": "^2.2.5",
+    "inquirer": "8.2.4"
   }
 }

@@ -1,6 +1,6 @@
 -- Either deletes or creates a database
-DROP DATABASE IF EXISTS tracker;
-CREATE DATABASE tracker;
+DROP DATABASE IF EXISTS tracker_db;
+CREATE DATABASE tracker_db;
 
 USE tracker;
 
@@ -12,13 +12,12 @@ CREATE TABLE department (
 
 -- Creates a role table that allows employees to be placed into their own salary range and what title they have
 CREATE TABLE role (
-    id INT,
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(30) NOT NULL,
-    salary DECIMAL (5,2),
-    employee_id INT,
-    PRIMARY KEY (id),
-    FOREIGN KEY (employee_id)
-    REFERENCES employee(id)
+    salary DECIMAL NOT NULL,
+    department_id INT,
+    FOREIGN KEY (department_id)
+    REFERENCES department(id)
     ON DELETE SET NULL
 );
 
@@ -33,5 +32,5 @@ CREATE TABLE employee (
     REFERENCES role(id),
     FOREIGN KEY (manager_id)
     REFERENCES employee(id)
-    ON DELETE SET NULL
+    ON DELETE SET NULL  
 );
